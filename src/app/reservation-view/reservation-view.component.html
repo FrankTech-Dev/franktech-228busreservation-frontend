@@ -1,0 +1,122 @@
+
+<div class="contient jumbotron mt-5">
+  <div class="contenu_1 mt-n4">
+    <div class="un  ml-3">
+      <span class="mt2"> <!--{{voyage.dateVoyage}}-->29-03-2020  <span class="ml-2 ml-md-5">De:<!--{{voyage.villeDepart}} --> Lomé <span class="ml-3"> A:  <!--{{voyage.villeArrivee}}--> Kara </span></span> </span> <br> <br>
+    <span><img src="src/assets/images/lo.webp" alt="logo" class="mr-2"> <!--{{voyage.nomCompagnie}} --></span> <br> <br>
+    <span>Départ: <!--{{voyage.heureDepart}}--> 10h00'</span>
+  </div>
+  </div>
+  <div class="line mt-n4"></div>
+  <div class="contenu_2 mt-n4">
+    <span class="ml-2 ml-md-5">
+      Prix unitaire:<!--{{voyage.prixVoyage}}--> 5000 FCFA
+    </span> <br> 
+    <span class="ml-2 ml-md-5">Nombre de passagers: <!--{{reservation.nbPassager}}--> 1</span> <br> 
+    <span class="ml-2 ml-md-5">Moyen de paiement:<!-- {{reservation.moyenDePayement}}--> Flooz </span> <br>
+    <span class="ml-2 ml-md-5">Numero: <!-- {{reservation.telephone}}--> 97497965</span> <br>
+    <span class="ml-2 ml-md-5">Frais: <!--{{voyage.frais}}-->5 %</span> <br>
+    <div class="line_2"></div> 
+    <span class="ml-2  ml-md-5">Total <span class="ml-5"> <!--{{(reservation.nbPassager*voyage.prixVoyage)+(reservation.nbPassager*voyage.prixVoyage*voyage.frais)/100}}-->5000 FCFA</span></span>
+    <!-- <span class="ml-5">
+      <button class="btn btn-danger d-none d-sm-block"> 
+        <a [routerLink]="['/accueil']">Annuler
+        </a> 
+      </button>
+    <span class="ml-5">
+      <form  (ngSubmit)="onSubmit()">
+        <button class="btn btn-success" type="submit">Valider</button>
+      </form>
+    </span> -->
+  <!-- </span> -->
+  </div>
+</div>
+
+<br><br>
+
+<div class="contient jumbotron2 mt-5">
+  <div class="contenu_4 mt-n4">
+    <div class="un  ml-3">
+      <h4 class="info">Payement Automatique</h4>
+      <div class="line_horizontal_white"></div>
+      <br>
+      <p>Votre compte sera débité automatiquement mais vous coûtera 4% de plus sur le montant total à payer</p>
+      <p><a class="link" href="#">En savoir plus?</a></p>
+      <p><a class="link" href="#">Je veux l'utiliser</a>  &nbsp;&nbsp;<button class="btn btn-success pull-right" type="submit" disabled>Payer Automatiquement</button></p>
+      
+  </div>
+  </div>
+  <div class="line_green mt-n4"></div>
+  <div class="contenu_3 mt-n4">
+    <div class="un  ml-3">
+      <h4 class="info">Payement Manuel</h4>
+      <div class="line_horizontal_white"></div>
+      <br>
+      <p>Envoyez le montant total à l'un des numéros suivant puis saisissez la reference de la transaction dans le
+        champ en-dessous et cliquez sur valider pour terminer.
+      </p>
+      <ul><li><b>Flooz: 97 77 97 46</b></li>
+        <li><b>TMoney: 92 18 13 51 </b></li></ul>
+        <form>
+          <label><b>REF #</b></label>
+          <input type="text" placeholder="198757896" class="">&nbsp;&nbsp;<button class="btn btn-primary " type="submit">Valider</button>
+        </form>
+    </div>
+  </div>
+  <div class="line_blue mt-n4"></div>
+</div>
+<br> <br> <br>
+
+<!-- <div class="row">
+  
+  <div class="col-md-5 mt-5 mb-5">
+    <div class="box box-default collapsed-box">
+      <div class="box-header with-border">
+        <h3 class="box-title">Payement Automatique</h3>
+
+        <div class="box-tools pull-right">
+          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+          </button>
+        </div>
+        <!-- /.box-tools >
+      </div>
+      <!-- /.box-header >
+      <div class="box-body">
+        The body of the box
+      </div>
+      <!-- /.box-body >
+    </div>
+    <!-- /.box >
+  </div>
+
+  <div class="col-md-2">
+   
+    <!-- /.box >
+  </div>
+
+
+  <div class="col-md-5 mt-5 mb-5">
+    <div class="box box-default collapsed-box">
+      <div class="box-header with-border">
+        <h3 class="box-title">Payement Manuel</h3>
+
+        <div class="box-tools pull-right">
+          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+          </button>
+        </div>
+        <!-- /.box-tools >
+      </div>
+      <!-- /.box-header >
+      <div class="box-body">
+        The body of the box
+      </div>
+      <!-- /.box-body >
+    </div>
+    <!-- /.box >
+  </div>
+
+
+
+</div> -->
+
+

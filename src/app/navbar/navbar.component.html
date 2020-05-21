@@ -1,0 +1,31 @@
+<header class="navbar navbar-expand-md">
+  
+  <nav class="navbar navbar-collapse ">
+    <a href="" class="navbar-brand">
+      <div class="logo col-3">
+        <span class="text">GetB</span><span class="icon"><i class="fas fa-bus-alt"></i></span><span class="text">s</span>
+       </div>
+    </a>
+     <div class=" main-item menu navbar-toggler wrapper_round" data-toggle="collapse" data-target="#navbarMenu">
+      <span class="line line_01"></span>
+      <span class="line line_02"></span>
+      <span class="line line_03"></span>
+     </div>
+   
+   <div class="collapse navbar-collapse " id="navbarMenu">
+  <ul class="navbar-nav d-flex justify-content-between col-6 offset-2 offset-md-4">
+    <li class="nav-item "> <a routerLink="accueil"> Accueil</a></li>
+    <li class="nav-item ml-2" *ngIf="!isAuth"> <a routerLink="inscription"> S'inscrire </a></li>
+    <li class="nav-item ml-2" *ngIf="!isAuth"> <a routerLink="connexion"> Connexion </a></li>
+    <li class="nav-item ml-2"><a routerLink="reservation"> Réservation </a></li>
+    <li class="nav-item ml-2" ><a routerLink="compte"> Compte </a></li>
+    <li>
+      <a (click)="onSignOut()"
+         style="cursor:pointer"
+         *ngIf="isAuth">Déconnexion</a>
+    </li>
+  </ul>
+  </div>
+  </nav>
+  
+  </header>

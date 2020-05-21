@@ -1,0 +1,264 @@
+div.jumbotron {
+  height: 103vh;
+  box-shadow:  0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+  background-color: white;
+}
+div.inscription h3 {
+  margin-top: 3%;
+}
+div.vert {
+  height: 35px;
+  width: 35px;
+  background-color: green;
+}
+div.bleu {
+  height: 35px;
+  width: 35px;
+  background-color: rgb(15, 15, 204);
+  margin-left: 35px;
+}
+div.contenu input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 520px;
+  border-color: #00000061;
+  border-radius: 0rem !important;
+  margin-left: 25%;
+}
+div.contenu input:focus {
+  box-shadow: none !important;
+}
+div.choix input {
+  width: 12%;
+  height: calc(0.8em + .75rem + 2px);
+}
+div.choix input:focus {
+  border-color: #fff;
+  box-shadow: none;
+}
+div.dessin_2 {
+  margin-left: 92%;
+}
+@media(max-width:330px){
+  div.jumbotron {
+    width: 75%;
+    height: 87vh;
+  }
+  div.contenu input{
+    width: 185px;
+    margin-left:7% !important;
+  }
+  div.vert, div.bleu{
+    width: 11px;
+    height: 11px;
+  }
+  div.bleu{
+    margin-left:11px;
+
+  }
+  div.vide {
+    height: 11px !important;
+  }
+  div.choix input {
+    width: 6%;
+    height: calc(0.45em + .72rem + 2px);
+    font-size: 13px;
+  }
+  div.choix input.tm {
+    margin-left: 16px !important;
+  }
+  div.dessin_2 {
+    margin-left: 87%;
+  }
+  div.inscription h3{
+    font-size: 17px !important;
+  }
+  div.contenu input::placeholder{
+    font-size: 11px !important;
+  }
+}
+div.vide {
+  height: 25px;
+}
+
+@media(min-width:331px) and (max-width:390px){  
+  div.jumbotron {
+    width: 75%;
+    height: 87vh;
+  }
+  div.vide {
+    height: 12px !important;
+  }
+  div.contenu input{
+    width: 185px;
+    margin-left:7% !important;
+  }
+  div.choix input {
+    width: 6.5%;
+    height: calc(0.6em + .75rem + 2px);
+    font-size: 15px;
+  }
+  div.inscription h3{
+    font-size: 19px !important;
+  }
+  div.contenu input::placeholder{
+    font-size: 14px !important;
+  }
+  div.vert, div.bleu{
+    width: 15px;
+    height: 15px;
+  }
+  div.bleu{
+    margin-left:15px;
+  }
+  div.choix input.tm {
+    margin-left: 20px !important;
+  }
+}
+
+@media(min-width:391px) and (max-width:450px){
+  div.jumbotron {
+    width: 75%;
+    height: 87vh;
+  }
+  div.contenu input{
+    width: 190px;
+    margin-left:18% !important;
+  }
+  div.vide {
+    height: 14px;
+  }
+  div.choix input {
+    width: 7%;
+    height: calc(0.6em + .75rem + 2px);
+    font-size: 16px;
+  }
+  div.inscription h3{
+    font-size: 20px !important;
+  }
+  div.contenu input::placeholder{
+    font-size: 15px !important;
+  }
+  div.vert, div.bleu{
+    width: 17px;
+    height: 17px;
+  }
+  div.bleu{
+    margin-left:17px;
+  }
+  div.choix input.tm {
+    margin-left: 20px !important;
+  }
+}
+
+@media(min-width:451px) and (max-width:600px){
+  div.jumbotron {
+    width: 75%;
+    height: 87vh;
+  }
+  div.contenu input{
+    width: 198px;
+    margin-left:20% !important;
+  }
+  div.vide {
+    height: 17px;
+  }
+  div.choix input {
+    width: 8%;
+    height: calc(0.6em + .75rem + 2px);
+    font-size: 16px;
+  }
+  div.inscription h3{
+    font-size: 20px !important;
+  }
+  div.contenu input::placeholder{
+    font-size: 15px !important;
+  }
+  div.vert, div.bleu{
+    width: 18px;
+    height: 18px;
+  }
+  div.bleu{
+    margin-left:18px;
+  }
+  div.choix input.tm {
+    margin-left: 22px !important;
+  }
+}
+
+@media(min-width:601px) and (max-width:800px){
+  div.jumbotron {
+    width: 75%;
+    height: 130vh;
+  }
+  div.contenu input{
+    width: 300px;
+    margin-left:24% !important;
+  }
+  div.choix input {
+    width: 9.5%;
+    height: calc(0.6em + .75rem + 2px);
+    font-size: 16px;
+  }
+  div.inscription h3{
+    font-size: 22px !important;
+  }
+  div.contenu input::placeholder{
+    font-size: 15px !important;
+  }
+  div.vert, div.bleu{
+    width: 23px;
+    height: 23px;
+  }
+  div.vide {
+    height: 19px;
+  }
+  div.bleu{
+    margin-left:23px;
+  }
+  div.choix input.tm {
+    margin-left: 22px !important;
+  }
+}
+
+@media(min-width:801px) and (max-width:991px){
+  div.jumbotron {
+    width: 75%;
+    height: 130vh;
+  }
+  div.contenu input{
+    width: 320px;
+    margin-left:24% !important;
+  }
+  div.choix input {
+    width: 10.3%;
+    height: calc(0.6em + .75rem + 2px);
+    font-size: 17px;
+  }
+  div.inscription h3{
+    font-size: 25px !important;
+  }
+  div.contenu input::placeholder{
+    font-size: 15px !important;
+  }
+  div.vide {
+    height: 22px;
+  }
+  div.vert, div.bleu{
+    width: 30px;
+    height: 30px;
+  }
+  div.bleu{
+    margin-left:30px;
+  }
+  div.choix input.tm {
+    margin-left: 26px !important;
+  }
+}
+@media(min-width:992px) and (max-width:1200px){
+  div.jumbotron {
+    width: 75%;
+    height: 130vh;
+  }
+}

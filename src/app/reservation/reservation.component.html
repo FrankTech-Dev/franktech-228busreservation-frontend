@@ -1,0 +1,49 @@
+<div class="baniere">
+  <!--app-navbar></!--app-navbar-->
+   <div class=" bounce">
+     <div>
+ 
+ </div>
+   </div>
+ </div>
+<div class="reservation">
+    <h3 class="text-center mb-md-5 mb-3">Reservation</h3>
+    <div class="container jumbotron">
+        <div class="dessin_1">
+          <div class="vert"></div>
+          <div class="bleu"></div>
+        </div>
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div  class="contenu mt-md-5 mt-4">
+          <input type="number" class="form-control mt-md-5 mt-2" placeholder="Nombre de place à Reservé" id="nbPassagers" name="nbPassagers" min="1" max="10" value="1" formControlName="nbPassagers" required>
+          <input type="text" class="form-control mt-md-5 mt-2" placeholder="nom et prénom des passagers séparer par des , Exemple: John CENA, John DOE" id="passagers" name="passagers" formControlName="passagers"  required>
+          <select name="moyenDePayement" id="moyenDePayement"  formControlName="moyenDePayement" class="form-control mt-md-5 mt-2">
+            <option value="moyen" selected >Moyen de paiement</option>
+            <option value="Flooz">Flooz-Moov</option>
+            <option value="Tmoney">Tmoney-Togocel</option>
+          </select>
+          <input type="text" class="form-control mt-md-5 mt-2" placeholder="Téléphone" id="tel" 
+        [ngClass]="{ 'is-invalid': myForm.controls['telephone'].errors && !myForm.controls['telephone'].pristine,
+         'is-valid': user ? !myForm.controls['telephone'].errors : !myForm.controls['telephone'].errors && !myForm.controls['telephone'].pristine}"  
+        formControlName="telephone"
+        required>
+        <div>
+          <div *ngIf="myForm.controls['telephone'].errors && !myForm.controls['telephone'].pristine"
+          class="invalid-feedback small_font d-flex justify-content-center ">
+          <small class="" [hidden]="!myForm.controls['telephone'].errors.required">telephone requis.</small>
+          <small [hidden]="!myForm.controls['telephone'].errors.pattern">telephone invalide.</small>
+          </div>
+        </div>
+        </div>
+      
+      <div class="d-flex justify-content-center mt-md-5 mt-4">
+        <button class="btn btn-success" type="submit">Valider</button>
+      </div>
+    </form>
+      <div class="dessin_2 mt-md-5 mt-2">
+        <div class="vert"></div>
+        <div class="bleu"></div>
+      </div>
+    </div>
+  </div>
+  

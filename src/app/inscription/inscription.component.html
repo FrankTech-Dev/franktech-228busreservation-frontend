@@ -1,0 +1,101 @@
+    <div class="baniere">
+      <!--app-navbar></!--app-navbar-->
+    <div class=" bounce">
+      <div>
+  
+  </div>
+    </div>
+  </div>
+<div class="inscription">
+  <h3 class="text-center mb-md-5 mb-3">Inscription</h3>
+  <div class="container jumbotron">
+      <div class="dessin_1">
+        <div class="vert"></div>
+        <div class="bleu"></div>
+      </div>
+      <form [formGroup]="form" (ngSubmit)="getInscription()" >
+      <div  class="contenu mt-md-5 mt-4">
+        <input type="text" class="form-control mt-md-5 mt-2" placeholder="Nom"
+         [ngClass]="{ 'is-invalid': form.controls['nom'].errors && !form.controls['nom'].pristine,
+         'is-valid': user ? !form.controls['nom'].errors : !form.controls['nom'].errors && !form.controls['nom'].pristine}"
+         id="nom" 
+         formControlName="nom"
+         name="nom"
+         required>
+         <div class="vide">
+          <div *ngIf="form.controls['nom'].errors && !form.controls['nom'].pristine"
+          class="invalid-feedback small_font d-flex justify-content-center ">
+          <small class="" [hidden]="!form.controls['nom'].errors.required">Nom requis.</small>
+          <small [hidden]="!form.controls['nom'].errors.pattern">Nom invalide.</small>
+          </div>
+        </div>
+
+        <input type="text" class="form-control " placeholder="Prenom" id="prenom"
+        [ngClass]="{ 'is-invalid': form.controls['prenom'].errors && !form.controls['prenom'].pristine,
+         'is-valid': user ? !form.controls['prenom'].errors : !form.controls['prenom'].errors && !form.controls['nom'].pristine}"
+        formControlName="prenom"
+         required>
+         <div class="vide">
+          <div *ngIf="form.controls['prenom'].errors && !form.controls['prenom'].pristine"
+          class="invalid-feedback small_font d-flex justify-content-center ">
+          <small class="" [hidden]="!form.controls['prenom'].errors.required">prenom requis.</small>
+          <small [hidden]="!form.controls['prenom'].errors.pattern">prenom invalide.</small>
+          </div>
+        </div>
+
+        <input type="text" class="form-control" placeholder="Téléphone" id="tel" 
+        [ngClass]="{ 'is-invalid': form.controls['telephone'].errors && !form.controls['telephone'].pristine,
+         'is-valid': user ? !form.controls['telephone'].errors : !form.controls['telephone'].errors && !form.controls['telephone'].pristine}"  
+        formControlName="telephone"
+        required>
+        <div class="vide">
+          <div *ngIf="form.controls['telephone'].errors && !form.controls['telephone'].pristine"
+          class="invalid-feedback small_font d-flex justify-content-center ">
+          <small class="" [hidden]="!form.controls['telephone'].errors.required">telephone requis.</small>
+          <small [hidden]="!form.controls['telephone'].errors.pattern">telephone invalide.</small>
+          </div>
+        </div>
+
+        <input type="email" class="form-control" placeholder="Email" id="Email" 
+        [ngClass]="{ 'is-invalid': form.controls['mail'].errors && !form.controls['mail'].pristine,
+         'is-valid': user ? !form.controls['mail'].errors : !form.controls['mail'].errors && !form.controls['mail'].pristine}" 
+        formControlName="mail"
+        required>
+        <div class="vide">
+          <div *ngIf="form.controls['mail'].errors && !form.controls['mail'].pristine"
+          class="invalid-feedback small_font d-flex justify-content-center ">
+          <small class="" [hidden]="!form.controls['mail'].errors.required">mail requis.</small>
+          <small [hidden]="!form.controls['mail'].errors.pattern">mail invalide.</small>
+          </div>
+        </div>
+
+
+        <input type="password" class="form-control" placeholder="Mot de passe" id="password" 
+        [ngClass]="{ 'is-invalid': form.controls['password'].errors && !form.controls['password'].pristine,
+         'is-valid': user ? !form.controls['password'].errors : !form.controls['password'].errors && !form.controls['password'].pristine}" 
+        formControlName="password"
+        required>
+        <div class="vide">
+          <div *ngIf="form.controls['password'].errors && !form.controls['password'].pristine"
+          class="invalid-feedback small_font d-flex justify-content-center ">
+          <small class="" [hidden]="!form.controls['password'].errors.required">Mot de Passe requis.</small>
+          <small [hidden]="!form.controls['password'].errors.pattern">Mot de Passe invalide.</small>
+          </div>
+        </div>
+
+      </div>
+      <p class="text-danger">{{ errorMessage }}</p>
+    <!--div class="choix mt-md-5 mt-3 d-flex justify-content-center">
+      <input type="radio" name="mobilemoney" formControlName="flooz" class="form-control " id="fl"><span>Flooz</span>
+      <input type="radio" name="mobilemoney"  formControlName="tmoney" class="form-control tm" id="tm" [(ngModel)]="checkChoix"><span>T-money</span>
+    </div-->
+    <div class="d-flex justify-content-center mt-md-5 mt-4">
+      <button class="btn btn-success" type="submit" [disabled]="!form.valid">Valider</button>
+    </div>
+  </form>
+    <div class="dessin_2 mt-md-5 mt-2">
+      <div class="vert"></div>
+      <div class="bleu"></div>
+    </div>
+  </div>
+</div>

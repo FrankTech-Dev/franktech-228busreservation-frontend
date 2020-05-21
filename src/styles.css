@@ -1,0 +1,191 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+a {
+  text-decoration: none;
+  list-style: none;
+}
+ul{
+  list-style: none !important;
+}
+ul a{
+  text-decoration: none;
+  color: #fff;
+}
+ul a:hover{
+  color:white;
+  text-decoration: none;
+}
+table a {
+  color: #fff;
+  text-decoration: none;
+}
+div.logo span.text {
+  font-family: pacifico !important;
+  font-size: 35px;
+  color: #fff;
+}
+div.logo span.icon {
+  color: #b4ec0b;
+  font-size: 22px;
+}
+div.collapse ul {
+  margin-left: 50%;
+}
+div.entete {
+  background-image:url(src\assets\images\bus_bg2.jpg);
+  height: 500px;
+  /* background-repeat: no-repeat; */
+}
+header {
+  background-color: #28a745;
+  /* height: 100px; */
+}
+div.vide {
+  height: 400px;
+}
+table{
+  border-collapse: separate;
+}
+div table {
+  margin-left: 12.5%;
+}
+tr td i {
+  font-size: 18px;
+  cursor: pointer;
+}
+@media(max-width:400px){
+  div.logo span.text{
+    font-size: 10px;
+  }
+  div.logo span.icon{
+    font-size: 10px;
+  }
+  header ul li {
+    font-size: 11px;
+  }
+}
+div.wrapper_round {
+  position: relative;
+  width: 35px !important;
+  height: 35px !important;
+  border-radius: 50%;
+  background-color: #17922c;
+  padding: 7px;
+}
+div.main-item {
+
+  position: relative;
+  transition: all ease 0.3s; 
+  width: 25px;
+  height: 25px;
+  /* background-color: white; */
+}
+div.main-item span.line {
+  position: absolute;
+  background-color: white;
+  height: 2.5px;
+  width: 65%;
+  border-radius: 12px;
+  /* transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.32s; */
+}
+div.main-item span.line_01{
+  top: 26%;
+}
+div.main-item span.line_02{
+  top: 50%;
+}
+div.main-item span.line_03{
+  top: 75%;
+}
+td button.btn, td i  {
+  margin: auto;
+}
+@media(min-width:401px) and (max-width:500px){
+  div.logo span.text{
+    font-size: 16px;
+  }
+  div.logo span.icon{
+    font-size: 12px;
+  }
+
+}
+@media(min-width:768px) {
+  /* div.collapse ul {
+    margin-left: 50%;
+  } */
+}
+@media(min-width:501px) and (max-width:700px){
+  div.logo span.text{
+    font-size: 25px;
+  }
+  div.logo span.icon{
+    font-size: 15px;
+  }
+}
+@media screen and (max-width:767px){
+  div ul.hamburger{
+    height: 110vh;
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    transition: all 1s ease-out;
+    /* margin-left: 46%; */
+    margin-top: 20px;
+  }
+  /* div.navbar-collapse {
+    margin-top: 60px;
+    background-color: #17922c;
+    height: 130vh;
+    width: 100%;
+  } */
+  /* div ul.hamburger.open {
+    clip-path: circle(1000px at 90% -10%);
+    clip-path: circle(1000px at 90% -10%);
+    
+  } */
+  div.menu {
+    /* position: absolute; */
+    /* transform: translate(-5%, -50%); */
+  }
+}
+@media(max-width:450px){
+  h3.titre {
+    font-size: 17px;
+  }
+  table thead th{
+    font-size: 11px;
+  }
+  tbody tr td {
+    font-size: 10px;
+  }
+  tbody tr td button {
+    width: 12px;
+    font-size: 10px;
+  }
+}
+@media (max-width:320px){
+  table {
+    margin-left: -2% !important;
+  }
+}
+@media (min-width:321px) and (max-width:360px) {
+      table {
+        margin-left: 3% !important;
+      }
+
+}
+@media (min-width:361px) and (max-width:380px) {
+  table {
+    margin-left: 6% !important;
+  }
+}
+@media (min-width:381px) and (max-width:500px) {
+  table {
+    margin-left: 9% !important;
+  }
+}

@@ -1,0 +1,54 @@
+<div class="page">
+ <!--app-navbar></!--app-navbar-->
+  <div class="entete fade-in">
+    <div class="c"></div>
+    <div class="text">
+      <h5 class="text-center"> <i> Avec GetBus, réservez votre billet en un seul click !</i></h5>
+    </div>
+    <div>
+
+</div>
+  </div>
+<section>
+ <h3 class="mt-5 text-center titre">Liste des voyages</h3>
+    <div class="">
+      <table class="table w-75 mt-5 mb-5">
+          <thead class="thead-dark text-center">
+            <tr>
+              <th scope="col">Agence</th>
+              <th scope="col">Départ / Arrivée</th>
+              <th scope="col">Date & Heure de départ</th>
+              <th scope="col">Places restantes</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody class="text-center" >
+            <tr  *ngFor = "let voyage of listVoyages| paginate:{itemsPerPage : 8, currentPage:pageActual}" >
+              <td>{{voyage.nomCompagnie}}</td>
+              <td>{{voyage.villeDepart}}->{{voyage.villeArrivee}}</td>
+              <td>{{voyage.dateVoyage}} à {{voyage.heureDepart}}</td>
+              <div *ngIf="voyage.placeRestante < 6">
+              <td class="badge  badge-pill mt-2" [ngClass]="'danger'" id="color">
+                {{voyage.placeRestante}}
+              </td>
+              </div>
+              <div *ngIf="voyage.placeRestante > 5 && voyage.placeRestante <16">
+              <td class="badge  badge-pill mt-2" [ngClass]="'warning'" id="color">
+                {{voyage.placeRestante}}
+              </td>
+              </div>
+              <div *ngIf="voyage.placeRestante >15">
+              <td class="badge  badge-pill mt-2" [ngClass]="'success'" id="color">
+                {{voyage.placeRestante}}
+              </td>
+              </div>
+              <td><i class="fas fa-eye d-sm-none" [routerLink]="['reservation']"></i> <button class="btn btn-primary d-none d-sm-block"> <a [routerLink]="['/reservation',voyage.identifiant]">Réserver</a> </button></td>
+            </tr>
+            </tbody>
+        </table>
+       <div class="d-flex justify-content-center"> <pagination-controls (pageChange) = "pageActual = $event"> </pagination-controls> </div>
+        
+    </div>
+  
+</section>
+</div>
