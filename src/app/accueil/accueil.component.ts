@@ -12,7 +12,7 @@ declare const changeColorToWarning: any;
   styleUrls: ['./accueil.component.css']
 })
 export class AccueilComponent implements OnInit {
-  voyages : Voyage[] = [new Voyage('Etrab', 'Lomé','Kara','09/10/2020','9h 20min',5,'15000fr'),
+ /*  voyages : Voyage[] = [new Voyage('Etrab', 'Lomé','Kara','09/10/2020','9h 20min',5,'15000fr'),
                          new Voyage('Etrab', 'Lomé','Kara','09/10/2020','9h 20min',22,'15000fr'),
                          new Voyage('Etrab', 'Lomé','Kara','09/10/2020','9h 20min',10,'15000fr'),
                          new Voyage('Etrab', 'Lomé','Kara','09/10/2020','9h 20min',6,'15000fr'),
@@ -27,7 +27,7 @@ export class AccueilComponent implements OnInit {
                          new Voyage('Etrab', 'Lomé','Kara','09/10/2020','9h 20min',11,'15000fr'),
                          new Voyage('Etrab', 'Lomé','Kara','09/10/2020','9h 20min',15,'15000fr'),
                          new Voyage('Etrab', 'Lomé','Kara','09/10/2020','9h 20min',2,'15000fr'),
-                        ];
+                        ]; */
                         //Initialiser le voyage par la liste Voyage
 
   constructor(private voyageServ: VoyageService) {
@@ -36,13 +36,13 @@ export class AccueilComponent implements OnInit {
    pageActual:number = 1
    listVoyages: Voyage[];
   ngOnInit() {
-
+    this.getAllVoyage();
   }
 
   getAllVoyage():void{
     this.voyageServ.getAllVoyageFromHolding()
     .subscribe((voyagesData) => {
-      this.listVoyages = voyagesData, console.log(voyagesData);
+      this.listVoyages = voyagesData;
     }, (error) => {
       console.log(error);
     });
