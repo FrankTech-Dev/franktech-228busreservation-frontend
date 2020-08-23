@@ -46,19 +46,19 @@ export class ReservationComponent implements OnInit {
     const passagers = this.myForm.get("passagers").value;
     const moyenDePayement = this.myForm.get("moyenDePayement").value;
     const telephone = this.myForm.get("telephone").value;
-    
+
     console.log('nbPassagers',nbPassagers );
     console.log('passagers',passagers );
     console.log('moyenDePayement',moyenDePayement );
     console.log('telephone',telephone );
 
     let reservation = new Reservation(this.identifiant,nbPassagers, passagers, moyenDePayement, telephone);
-    
+
     this.transfertData.setData(reservation);
 
     this.router.navigate(['/reservation-view']);
-    
-    
+
+
   }
 
 }
