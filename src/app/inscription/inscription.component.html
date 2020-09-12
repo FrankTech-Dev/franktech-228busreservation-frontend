@@ -2,7 +2,7 @@
       <!--app-navbar></!--app-navbar-->
     <div class=" bounce">
       <div>
-  
+
   </div>
     </div>
   </div>
@@ -17,8 +17,8 @@
       <div  class="contenu mt-md-5 mt-4">
         <input type="text" class="form-control mt-md-5 mt-2" placeholder="Nom"
          [ngClass]="{ 'is-invalid': form.controls['nom'].errors && !form.controls['nom'].pristine,
-         'is-valid': user ? !form.controls['nom'].errors : !form.controls['nom'].errors && !form.controls['nom'].pristine}"
-         id="nom" 
+         'is-valid': form ? !form.controls['nom'].errors : !form.controls['nom'].errors && !form.controls['nom'].pristine}"
+         id="nom"
          formControlName="nom"
          name="nom"
          required>
@@ -32,7 +32,7 @@
 
         <input type="text" class="form-control " placeholder="Prenom" id="prenom"
         [ngClass]="{ 'is-invalid': form.controls['prenom'].errors && !form.controls['prenom'].pristine,
-         'is-valid': user ? !form.controls['prenom'].errors : !form.controls['prenom'].errors && !form.controls['nom'].pristine}"
+         'is-valid': form ? !form.controls['prenom'].errors : !form.controls['prenom'].errors && !form.controls['nom'].pristine}"
         formControlName="prenom"
          required>
          <div class="vide">
@@ -43,9 +43,9 @@
           </div>
         </div>
 
-        <input type="text" class="form-control" placeholder="Téléphone" id="tel" 
+        <input type="text" class="form-control" placeholder="Téléphone" id="tel"
         [ngClass]="{ 'is-invalid': form.controls['telephone'].errors && !form.controls['telephone'].pristine,
-         'is-valid': user ? !form.controls['telephone'].errors : !form.controls['telephone'].errors && !form.controls['telephone'].pristine}"  
+         'is-valid': form ? !form.controls['telephone'].errors : !form.controls['telephone'].errors && !form.controls['telephone'].pristine}"
         formControlName="telephone"
         required>
         <div class="vide">
@@ -56,9 +56,9 @@
           </div>
         </div>
 
-        <input type="email" class="form-control" placeholder="Email" id="Email" 
+        <input type="email" class="form-control" placeholder="Email" id="Email"
         [ngClass]="{ 'is-invalid': form.controls['mail'].errors && !form.controls['mail'].pristine,
-         'is-valid': user ? !form.controls['mail'].errors : !form.controls['mail'].errors && !form.controls['mail'].pristine}" 
+         'is-valid': form ? !form.controls['mail'].errors : !form.controls['mail'].errors && !form.controls['mail'].pristine}"
         formControlName="mail"
         required>
         <div class="vide">
@@ -70,9 +70,9 @@
         </div>
 
 
-        <input type="password" class="form-control" placeholder="Mot de passe" id="password" 
+        <input type="password" class="form-control" placeholder="Mot de passe" id="password"
         [ngClass]="{ 'is-invalid': form.controls['password'].errors && !form.controls['password'].pristine,
-         'is-valid': user ? !form.controls['password'].errors : !form.controls['password'].errors && !form.controls['password'].pristine}" 
+         'is-valid': form ? !form.controls['password'].errors : !form.controls['password'].errors && !form.controls['password'].pristine}"
         formControlName="password"
         required>
         <div class="vide">

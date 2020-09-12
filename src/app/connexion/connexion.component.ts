@@ -19,7 +19,7 @@ export class ConnexionComponent implements OnInit {
    }
 
   ngOnInit() {
-    
+
   }
 
   controleConnexion(){
@@ -32,13 +32,11 @@ export class ConnexionComponent implements OnInit {
   seConnecter(){
     const mail = this.connect.get("email").value;
     const pass = this.connect.get("password").value;
-    console.log("mail111", mail);
-    console.log("pass1111", pass);
     this.authService.signInUser(mail,pass).then((value)=>{
       this.getClientByEmail(mail);
     });
-    
-    
+
+
     this.router.navigate(['/accueil']);
 
   }
