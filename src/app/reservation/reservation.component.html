@@ -2,7 +2,7 @@
   <!--app-navbar></!--app-navbar-->
    <div class=" bounce">
      <div>
- 
+
  </div>
    </div>
  </div>
@@ -22,9 +22,8 @@
             <option value="Flooz">Flooz-Moov</option>
             <option value="Tmoney">Tmoney-Togocel</option>
           </select>
-          <input type="text" class="form-control mt-md-5 mt-2" placeholder="Téléphone" id="tel" 
-        [ngClass]="{ 'is-invalid': myForm.controls['telephone'].errors && !myForm.controls['telephone'].pristine,
-         'is-valid': user ? !myForm.controls['telephone'].errors : !myForm.controls['telephone'].errors && !myForm.controls['telephone'].pristine}"  
+          <input type="text" class="form-control mt-md-5 mt-2" placeholder="Téléphone" id="tel"
+        [ngClass]="{ 'is-invalid': myForm.controls['telephone'].errors && !myForm.controls['telephone'].pristine}"
         formControlName="telephone"
         required>
         <div>
@@ -35,7 +34,7 @@
           </div>
         </div>
         </div>
-      
+
       <div class="d-flex justify-content-center mt-md-5 mt-4">
         <button class="btn btn-success" type="submit">Valider</button>
       </div>
@@ -46,4 +45,4 @@
       </div>
     </div>
   </div>
-  
+
