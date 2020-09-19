@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ReservationService } from '../reservation.service';
-import { Reservation } from '../reservation';
+import { ReservationService } from '../services/reservation.service';
+import { Reservation } from '../model/reservation';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { TransfertDataService } from '../transfert-data.service';
+import { TransfertDataService } from '../services/transfert-data.service';
 
 @Component({
   selector: 'app-reservation',

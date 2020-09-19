@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Voyage} from './voyage.model';
-import { VoyageService } from '../voyage.service';
+import { VoyageService } from '../services/voyage.service';
 
 
 

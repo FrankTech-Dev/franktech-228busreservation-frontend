@@ -11,11 +11,10 @@ import { ReservationComponent } from './reservation/reservation.component';
 import { CompteComponent } from './compte/compte.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { Voyage } from './accueil/voyage.model';
 import {NgxPaginationModule} from 'ngx-pagination';
-import { VoyageService } from './voyage.service';
-import { ClientService } from './client.service';
-import { ReservationService } from './reservation.service';
+import { VoyageService } from './services/voyage.service';
+import { ClientService } from './services/client.service';
+import { ReservationService } from './services/reservation.service';
 import { AuthService } from './services/auth.service';
 import { AuthGuardService } from './services/auth-guard.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -23,7 +22,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { ReservationViewComponent } from './reservation-view/reservation-view.component';
 import { PhoneVerificationComponent } from './verification/phone-verification/phone-verification.component';
 import { ConfirmPhoneNumberComponent } from './confirm-phone-number/confirm-phone-number.component';
-import { ConfirmCodeService } from './confirm-code.service';
 import { VerificationService } from './verification/verification.service';
 
 // import {voyageService} from './accueil/services/voyage.service';
@@ -49,7 +47,7 @@ const appRoutes: Routes = [
     NavbarComponent,
     ReservationViewComponent,
     PhoneVerificationComponent,
-    ConfirmPhoneNumberComponent
+    ConfirmPhoneNumberComponent,
 
   ],
   exports: [RouterModule],

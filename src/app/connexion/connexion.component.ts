@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
-import { ClientService } from '../client.service';
+import { ClientService } from '../services/client.service';
 import { Client } from '../inscription/client.model';
 
 @Component({
@@ -19,7 +19,7 @@ export class ConnexionComponent implements OnInit {
    }
 
   ngOnInit() {
-    
+
   }
 
   controleConnexion(){
@@ -37,8 +37,8 @@ export class ConnexionComponent implements OnInit {
     this.authService.signInUser(mail,pass).then((value)=>{
       this.getClientByEmail(mail);
     });
-    
-    
+
+
     this.router.navigate(['/accueil']);
 
   }
