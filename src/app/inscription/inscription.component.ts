@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators }   from '@angular/forms';
 import { Client } from './client.model';
-import { ClientService } from '../client.service';
+import { ClientService } from '../services/client.service';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 
@@ -14,17 +14,17 @@ export class InscriptionComponent implements OnInit {
 
  form: FormGroup;
  errorMessage: string;
- 
+
 
   constructor( private fb:FormBuilder, private clientService: ClientService, private authService: AuthService,
-    private router: Router) { 
+    private router: Router) {
     this.controleValidation();
   }
 
   ngOnInit() {
-    
+
   }
- 
+
   controleValidation(){
     this.form = this.fb.group({
       nom: ["",[Validators.required,Validators.pattern(/^[a-zA-Z]+([0-9a-zA-Z]){2,10}/)]],
@@ -35,7 +35,7 @@ export class InscriptionComponent implements OnInit {
 
     })
   }
-  
+
 
   getInscription(){
     const mon_nom = this.form.get("nom").value;
@@ -43,13 +43,9 @@ export class InscriptionComponent implements OnInit {
     const mon_telephone = this.form.get("telephone").value;
     const mon_mail = this.form.get("mail").value;
     const password = this.form.get("password").value;
-    console.log('nom',mon_nom );
-    console.log('prenom',mon_prenom );
-    console.log('telephone',mon_telephone );
-    console.log('mail',mon_mail );
 
     let client = new Client(mon_nom,mon_prenom,mon_telephone, mon_mail);
-    
+
     this.addClient(client);
     this.authService.createNewUser(mon_mail, password).then(
       () => {
@@ -59,8 +55,8 @@ export class InscriptionComponent implements OnInit {
         this.errorMessage = error;
       }
     );
-    
-    
+
+
   }
 
   addClient(client: Client): void{

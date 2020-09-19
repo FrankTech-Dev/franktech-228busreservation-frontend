@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
-import { ClientService } from '../client.service';
+import { ClientService } from '../services/client.service';
 import { Client } from '../inscription/client.model';
 
 @Component({

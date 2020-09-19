@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ConfirmCodeService } from '../confirm-code.service';
 import { VerificationService } from '../verification/verification.service';
 import { Verify } from '../verification/Verify';
 
