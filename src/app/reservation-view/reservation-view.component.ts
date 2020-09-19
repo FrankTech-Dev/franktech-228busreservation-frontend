@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
-import { TransfertDataService } from '../transfert-data.service';
-import { VoyageService } from '../voyage.service';
-import { Voyage } from '../voyage';
-import { Reservation } from '../reservation';
+import { TransfertDataService } from '../services/transfert-data.service';
+import { VoyageService } from '../services/voyage.service';
+import { Voyage } from '../model/voyage';
+import { Reservation } from '../model/reservation';
 import { Client } from '../inscription/client.model';
-import { ReservationService } from '../reservation.service';
+import { ReservationService } from '../services/reservation.service';
 
 @Component({
   selector: 'app-reservation-view',
@@ -22,16 +22,16 @@ export class ReservationViewComponent implements OnInit {
   constructor(private route:ActivatedRoute,private router:Router, private transfertData:TransfertDataService, private voyageService: VoyageService, private reservationService: ReservationService) {
     //
    }
- 
+
   ngOnInit() {
    /* this.data = this.transfertData.getData();
     if(this.data){
-      
+
       this.reservation = this.data as Reservation;
       console.log('reservation recuperer: '+this.reservation.identifiantVoyage);
      this.getVoyageByIdentifiant(this.reservation.identifiantVoyage);
      //console.log('voyage ->'+this.voyage.dateVoyage+', prix: '+this.voyage.prixVoyage);
-     
+
      //this.prixTotal = this.reservation.nbPassager * this.voyage.prixVoyage;
      //this.prixTotalTTC = this.prixTotal + (this.prixTotal*this.voyage.frais)/100;
      //console.log('total ttc: '+this.prixTotalTTC);
@@ -40,7 +40,7 @@ export class ReservationViewComponent implements OnInit {
       console.log("ERREUR / reservation null");
       this.router.navigate(['/accueil']);
     }*/
-    
+
   }
 
   onSubmit(){

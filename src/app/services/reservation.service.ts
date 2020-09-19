@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient } from '@angular/common/http';
 import {Observable} from 'rxjs/internal/Observable';
-import { Reservation } from './reservation';
-import { Client } from './inscription/client.model';
+import { Reservation } from '../model/reservation';
+import { Client } from '../inscription/client.model';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
