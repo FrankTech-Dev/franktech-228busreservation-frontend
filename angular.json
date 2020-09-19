@@ -34,7 +34,6 @@
               "src/assets/js/changeColor.js"
             ],
             "es5BrowserSupport": true
-      
           },
           "configurations": {
             "production": {
@@ -141,5 +140,8 @@
       }
     }
   },
-  "defaultProject": "getbus"
+  "defaultProject": "getbus",
+  "cli": {
+    "analytics": false
+  }
 }
